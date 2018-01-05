@@ -1,0 +1,48 @@
+# dependencies
+/vendor
+/node_modules
+composer.lock
+composer.phar
+
+# local configuration
+.env
+remove_site
+
+# local development
+/public/sites
+/resources/sites
+/public/dev
+
+# respond-ui
+/public/app
+/public/assets/
+/public/favicon.ico
+/public/inline.bundle.js
+/public/inline.bundle.js.map
+/public/main.bundle.js
+/public/main.bundle.js.map
+/public/polyfills.bundle.js
+/public/polyfills.bundle.js.map
+/public/scripts.bundle.js
+/public/scripts.bundle.js.map
+/public/styles.bundle.js
+/public/styles.bundle.js.map
+/public/vendor.bundle.js
+/public/vendor.bundle.js.map
+public/themes/custom/
+
+# theme development
+/public/themes/respond-themes
+/public/themes/respond-themes-premium
+/design
+
+# debugging
+/public/info.php
+
+# respond notes
+roadmap.md
+technology.md
+todo.md
+
+# log files
+*.log
