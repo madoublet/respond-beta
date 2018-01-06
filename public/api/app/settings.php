@@ -3,7 +3,7 @@
   // load global app
   require_once(realpath(__DIR__ . '/..').'/index.php');
 
-  // load model
+  // dependencies
   use App\Respond\Models\App;
 
   $arr = App::settings();
