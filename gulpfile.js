@@ -6,18 +6,6 @@ const concat = require('gulp-concat');
 const minify = require('gulp-minify');
 const cachebust = require('gulp-cache-bust');
 
-// copy node modules (no longer needed with new build)
-gulp.task('copy-nm', function() {
-
-    var src, dest;
-
-    src = 'node_modules/**/*';
-    dest = 'public/';
-
-    return gulp.src(src, {base:"."})
-        .pipe(gulp.dest(dest));
-});
-
 // create a zip for the release
 gulp.task('create-zip', function() {
 
@@ -117,21 +105,8 @@ gulp.task('copy-css', function() {
 
 });
 
-// bust-cache
-gulp.task('cache-bust', function () {
-
-  var cachebust = require('gulp-cache-bust');
-
-  return gulp.src('public/index.html')
-      .pipe(cachebust({
-          type: 'timestamp'
-      }))
-      .pipe(gulp.dest('public/', {overwrite:true}));
-
-});
-
 // copy
-gulp.task('default', gulp.series(['copy-respond-ui']));
+gulp.task('default', gulp.series(['copy-folders', 'copy-js', 'copy-css', 'copy-respond-ui']));
 
 // create a zip file for the project in dist/release.zip
 gulp.task('zip', gulp.series(['create-zip']));

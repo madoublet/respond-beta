@@ -8,7 +8,8 @@
   "license": "MIT",
   "dependencies": {
     "hashedit": "1.0.0",
-    "respond-ui": "6.1.0"
+    "respond-ui": "6.1.0",
+    "ace-builds": "1.2.5"
   },
   "devDependencies": {
     "gulp": "github:gulpjs/gulp#4.0",
